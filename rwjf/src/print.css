@@ -1,0 +1,27 @@
+*{
+    position: static !important;
+    float: none !important;
+    color: #000 !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    filter: none !important;
+    -ms-filter: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+a{
+    color: #333 !important;
+    text-decoration: underline !important;
+}
+tr, img, blockquote{
+    page-break-inside: avoid;
+}
+p{
+    orphans: 3;
+    widows: 3;
+}
+
+.ir{
+    text-indent: 0 !important;
+    overflow: visible !important;
+}

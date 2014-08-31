@@ -1,0 +1,101 @@
+/* @group Utility */
+
+/* Image replacement */
+.ir{
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+/* Hide elements visually and in screen readers */
+.gone{
+    display: none;
+    position: absolute;
+    visibility: hidden;
+}
+
+/* Hide elements visually, allow in screen readers */
+.hidden{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* @end Utility */
+
+/* @group Dog-Eared Blue Boxes */
+
+.dog-eared {
+    background-color: #CFE3F4;
+    position: relative;
+}
+
+/* @group Corner */
+
+.dog-eared:before {
+    background: #fff url(/images/folded-callout-corner.png) no-repeat;
+    content: '';
+    display: block;
+    float: right;
+    height: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+    .dog-eared:before {
+        background-image: url(/images/folded-callout-corner.png);
+        background-size: 15px auto;
+    }
+}
+
+/* @group Background Color Adjustments */
+
+.dog-eared.fbfaf9:before {
+    background-color: #fbfaf9;
+}
+
+.dog-eared.f6f5f2:before {
+    background-color: #f6f5f2;
+}
+
+.dog-eared.eeeeee:before {
+    background-color: #eeeeee;
+}
+
+/* Can't set background color reliably in IE8, so ditch the dog-ear */
+.ie8 .dog-eared:before {
+    display: none;
+}
+
+/* @end */
+
+/* @end Corner */
+
+/* @end Dog-Eared Blue Boxes */
+
+/* @group Social Media Icons */
+
+.social-media-icons li a {
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+}
+
+.social-media-icons li a:hover {
+    opacity: 0.6;
+}
+
+/* @end */
+
+
