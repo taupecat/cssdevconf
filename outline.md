@@ -1,36 +1,62 @@
-• three things in webdev I love:
-    • wordpress
-    • responsive web design
+## Introduction
+
+• Three things in #webdev I love:
+    • WordPress
+    • Responsive Web Design
     • Sass
 
-this talk is about the second two things
+This talk is about the second two things.
 
-but everything here can be applied to wordpress! (or drupal, or Sitecore, or Static site generators) it doesn't matter the back end platform as long as you can use sass in your front end authoring process. 
+BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or static site generators). It doesn't matter what platform you're using as long as you can use Sass in your front end authoring process.
 
-## how can sass help in RWD development
+* This talk is _not_ an introduction to Sass or RWD. It's intended for developers who know the fundamentals of both and looking for ways to put them together and take the next step into advanced tools.
 
-• variables
+## Prologue
+
+* But first, a story:
+	* rwjf.org (Oct-Dec 2011): my first major responsive project
+	* 2 front end developers, no CSS preprocessors (git hook for concatenating separate CSS files)
+	* Finished file is **80kB**
+
+* **Why** should you use Sass (or any preprocessor) for RWD?
+	* Partials allow for better code organization and less VCS conflicts
+	* Provide function, mixin, and media query bubbling functionality
+
+## Part I: Sass Basics for RWD
+
+• Variables
 
 • functions
-    • percentage() + create your own
+    * Responsive formula: target / context = result
+    • percentage()
+    * Create your own
 
-• media query bubbling with @content
+• Mixins
+	* Benefits of creating your own custom mixins
+
+• Media query bubbling
     • downside: repeating media queries (gzip)
 
-• breakpoints
-
 • @extend
+
+## Part II: Working with Libraries
+
+• breakpoint + susy
 
 • flint?
 
 • sass-enabled grid system
 
-## suggested sass structure
+## Part III: Suggested Sass Structure
 
 • util directory
 
-## what sass *isn't* good for
+## What Sass *isn't* good for
 
-• vendor prefixing
+• Vendor prefixing (Autoprefixer)
+
+## How to fall back to older browsers
+
+* Modernizr + mixins
 
 ## research
