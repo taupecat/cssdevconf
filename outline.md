@@ -9,8 +9,6 @@ This talk is about the second two things.
 
 BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or static site generators). It doesn't matter what platform you're using as long as you can use Sass in your front end authoring process.
 
-* This talk is _not_ an introduction to Sass or RWD. It's intended for developers who know the fundamentals of both and looking for ways to put them together and take the next step into advanced tools.
-
 ## Prologue
 
 * But first, a story:
@@ -18,9 +16,10 @@ BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or sta
 	* 2 front end developers, no CSS preprocessors (git hook for concatenating separate CSS files)
 	* Finished file is **80kB**
 
-* **Why** should you use Sass (or any preprocessor) for RWD?
+* **Why** should you use Sass for RWD?
 	* Partials allow for better code organization and less VCS conflicts
 	* Provide function, mixin, and media query bubbling functionality
+    * Libraries for rapid prototyping and development
 
 ## Part I: Sass Basics for RWD
 
@@ -35,6 +34,7 @@ BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or sta
 	* Benefits of creating your own custom mixins
 
 • Media query bubbling
+    * Not JUST for screen widths
     • downside: repeating media queries (gzip)
 
 • @extend
