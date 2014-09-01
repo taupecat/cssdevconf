@@ -1,0 +1,82 @@
+@import "logo";
+@import "header-aux";
+@import "search";
+
+.header-container {
+	margin-bottom: 1em;
+
+	body.home & {
+		margin-bottom: 0;
+	}
+}
+
+.site-header {
+	background-color: map-get($blue_map, "normal");
+	font-family: $roboto;
+	height: ce(40px);
+	width: 100%;
+
+	@include bp(medium) {
+		background-color: #f8f8f8;
+		height: ce(60px);
+		margin-bottom: 0;
+		position: relative;
+	}
+
+	.header-wrapper {
+		display: block;
+		height: 100%;
+		margin: 0 auto;
+		max-width: ce(1000px);
+		width: 100%;
+	}
+
+	/**
+	 * Site Branding (.site-branding)
+	 */
+	
+	.site-branding {
+		display: block;
+		height: 100%;
+	}
+
+	.site-title {
+		display: block;
+		float: left;
+		height: 100%;
+		width: 50%;
+
+		@include bp(medium) {
+			width: 87px;
+		}
+
+		.logo {
+			height: 67%;
+			margin: 6px 15px 0 10px;
+		}
+	}
+
+	.menu-open {
+		@extend %genericon;
+		@extend %genericon-menu;
+		@extend %ir;
+		color: #fff;
+		display: block;
+		float: right;
+		font-size: ce(24px);
+		height: 100%;
+		line-height: (40px / 24px);
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		width: 80px;
+
+		&:before {
+			width: auto;
+		}
+
+		@include bp(medium) {
+			display: none;
+		}
+	}
+}

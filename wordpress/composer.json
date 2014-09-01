@@ -1,0 +1,55 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"  
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress",
+        "type": "webroot",
+        "version": "3.9.2",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress/WordPress/archive/3.9.2.zip"
+        },
+        "require" : {
+          "fancyguy/webroot-installer": "1.0.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0",
+    "wordpress": "3.9.2",
+    "fancyguy/webroot-installer": "1.0.0",
+    "wpackagist-plugin/add-from-server":"*",
+    "wpackagist-plugin/advanced-custom-fields":"*",
+    "wpackagist-plugin/admin-post-navigation":"*",
+    "wpackagist-plugin/black-studio-tinymce-widget":"*",
+    "wpackagist-plugin/co-authors-plus":"*",
+    "wpackagist-plugin/contact-form-7":"*",
+    "wpackagist-plugin/custom-tag-widget":"*",
+    "wpackagist-plugin/debug-bar":"*",
+    "wpackagist-plugin/flipboard-magazine-widget":"*",
+    "wpackagist-plugin/fv-top-level-cats":"*",
+    "wpackagist-plugin/google-analytics-for-wordpress":"*",
+    "wpackagist-plugin/jetpack":"*",
+    "wpackagist-plugin/latest-tweets-widget":"*",
+    "wpackagist-plugin/list-category-posts":"*",
+    "wpackagist-plugin/markdown-on-save":"*",
+    "wpackagist-plugin/regenerate-thumbnails":"*",
+    "wpackagist-plugin/show-template":"*",
+    "wpackagist-plugin/simple-page-ordering":"*",
+    "wpackagist-plugin/tc-custom-taxonomy-filter":"*",
+    "wpackagist-plugin/theme-check":"*",
+    "wpackagist-plugin/wordpress-importer":"*",
+    "wpackagist-plugin/worker":"*",
+    "wpackagist-plugin/wp-siren-recent-posts-by-category":"*"
+  },
+  "extra": {
+    "webroot-dir": "_wp",
+    "webroot-package": "wordpress"
+  }
+}

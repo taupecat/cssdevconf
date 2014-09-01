@@ -1,0 +1,7 @@
+plugins/*
+!plugins/category-post-list-widget/
+!plugins/rp3/
+!plugins/rp3-mailchimp/
+!plugins/wp-migrate-db-pro/
+!plugins/wp-migrate-db-pro-media-files/
+debug.log
