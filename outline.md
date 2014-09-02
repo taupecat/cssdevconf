@@ -14,6 +14,7 @@ BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or sta
 * But first, a story:
 	* rwjf.org (Oct-Dec 2011): my first major responsive project
 	* 2 front end developers, no CSS preprocessors (git hook for concatenating separate CSS files)
+    * _Hours_ spent calculating percentages, then copying and pasting those results into our CSS
 	* Finished file is **80kB**
 
 * **Why** should you use Sass for RWD?
@@ -21,9 +22,18 @@ BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or sta
 	* Provide function, mixin, and media query bubbling functionality
     * Libraries for rapid prototyping and development
 
-## Part I: Sass Basics for RWD
+## Part I: RWD Basics
+
+    * Fluid layouts (a.k.a. flexible grids)
+    * Flexible images & media
+    * Media Queries (a.k.a. breakpoints)
+
+Sass has tools that will help us with all of these.
+
+## Part II: Sass Basics for RWD
 
 • Variables
+    * Store media query settings
 
 • functions
     * Responsive formula: target / context = result
@@ -34,20 +44,24 @@ BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or sta
 	* Benefits of creating your own custom mixins
 
 • Media query bubbling
+    * Basic example
+    * Example using variables
+    * Chris Coyier's "baby-bear, mama-bear, papa-bear" method
+
     * Not JUST for screen widths
     • downside: repeating media queries (gzip)
 
-• @extend
+• @extend + %placeholder
+    * Great for non-semantic classes
+    * BUT! doesn't play friendly with media queries
 
-## Part II: Working with Libraries
-
-• breakpoint + susy
-
-• flint?
+## Part III: Working with Libraries
 
 • sass-enabled grid system
+• breakpoint + (susy|singularity)
+• flint?
 
-## Part III: Suggested Sass Structure
+## Part IV: Suggested Sass Structure
 
 • util directory
 

@@ -75,12 +75,14 @@
 					<p>There are <strong>3</strong> things that I really love in web development:</p>
 
 					<ul>
-						<li class="fragment">WordPress</li>
-						<li class="fragment">Responsive Web Design</li>
-						<li class="fragment">Sass</li>
+						<li class="fragment fade-out" data-fragment-index="2">WordPress</li>
+						<li class="fragment" data-fragment-index="0">Responsive Web Design</li>
+						<li class="fragment" data-fragment-index="1">Sass</li>
 					</ul>
 
-					<p class="fragment">This talk is about the latter 2.</p>
+					<p class="fragment" data-fragment-index="2">This talk is about the last 2.</p>
+
+					<aside class="notes">BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or static site generators). It doesn't matter what platform you're using as long as you can use Sass in your front end authoring process.</aside>
 
 				</section>
 
@@ -92,10 +94,61 @@
 				</section>
 
 				<section>
-					[rwjf screenshots]
+					<p>[rwjf screenshots]</p>
+
+					<aside class="notes" data-markdown>
+					</aside>
+
+				</section>
+
+				<section>
+
+<pre><code data-trim>
+.column_66 .dog-eared {
+    padding: 24px 3.870967741935%; /* 24px / 620px */
+}
+</code></pre>
+
+					<div class="fragment">
+						<img src="images/calculator.png" style="width: 218px; height: auto;">
+					</div>
+
 				</section>
 
 
+				<!-- ## Part I: RWD Basics -->
+
+				<section>
+
+					<h3>RWD Basics</h3>
+
+					<ul>
+						<li class="fragment">Fluid Layouts</li>
+						<li class="fragment">Flexible Images and Media</li>
+						<li class="fragment">Media Queries</li>
+					</ul>
+
+					<aside class="notes">
+						Sass has tools to help with all of these.
+					</aside>
+
+				</section>
+
+				<section>
+
+					<h3>Sass Tools for RWD</h3>
+
+					<h4>Variables</h4>
+
+				</section>
+
+				<section>
+
+					<h3>Sass Tools for RWD</h3>
+
+					<p>Built-in function: <strong>percentage(target, context)</strong></p>
+
+				</section>
 
 			</div>
 
