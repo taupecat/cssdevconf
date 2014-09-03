@@ -60,7 +60,7 @@
 				</section>
 
 				<section>
-						<h2>Tracy Rōtton</h2>
+						<h2>Trācy Rōtton</h2>
 					<ul>
 						<li><a href="http://twitter.com/taupecat">@taupecat</a></li>
 						<li>Lead Web Developer for <a href="http://rp3agency.com">RP3 Agency</a></li>
@@ -105,7 +105,7 @@
 
 <pre><code data-trim>
 .column_66 .dog-eared {
-    padding: 24px 3.870967741935%; /* 24px / 620px */
+  padding: 24px 3.870967741935%; /* 24px / 620px */
 }
 </code></pre>
 
@@ -136,6 +136,12 @@
 
 				<section>
 
+					<img src="images/chocolate-and-peanutbutter.jpg">
+
+				</section>
+
+				<section>
+
 					<h3>Sass Tools for RWD</h3>
 
 					<h4>Variables</h4>
@@ -147,6 +153,171 @@
 					<h3>Sass Tools for RWD</h3>
 
 					<p>Built-in function: <strong>percentage(target, context)</strong></p>
+
+				</section>
+
+				<section>
+
+					<h3>Media Query Bubbling</h3>
+
+					<p class="fragment">The awesome sauce that makes working with RWD <strong>soooo</strong> much easier.</p>
+
+				</section>
+
+
+				<!-- Media Query Bubbling: Padawan -->
+
+				<section>
+
+					<section>
+
+						<h3>Media Query Bubbling:<br>Padawan</h3>
+
+						<h4>SCSS:</h4>
+
+<pre><code data-trim>
+.sidebar {
+  background-color: #e5e5e5;
+  font-size: 1.2em;
+
+  @media all and (min-width: 43.125em) {
+    float: left;
+    width: percentage(400px / 1280px);
+  }
+}
+</code></pre>
+
+					</section>
+
+					<section>
+
+						<h3>Media Query Bubbling:<br>Padawan</h3>
+
+						<h4>CSS:</h4>
+
+<pre><code data-trim>
+.sidebar {
+  background-color: #e5e5e5;
+  font-size: 1.2em;
+}
+
+@media all and (min-width: 43.125em) {
+  .sidebar {
+    float: left;
+    width: 31.25%;
+  }
+}
+</code></pre>
+
+					</section>
+
+				</section>
+
+
+
+				<!-- Media Query Bubbling: Jedi Knight -->
+
+				<section>
+
+					<section>
+
+						<h3>Media Query Bubbling:<br>Jedi Knight</h3>
+
+						<h4>SCSS:</h4>
+
+<pre><code data-trim>
+$bp-medium: (690px / 16px * 1em);
+
+.sidebar {
+  background-color: #e5e5e5;
+  font-size: 1.2em;
+
+  @media all and ($bp-medium) {
+    float: left;
+    width: percentage(400px / 1280px);
+  }
+}
+</code></pre>
+
+					</section>
+
+					<section>
+
+						<h3>Media Query Bubbling:<br>Jedi Knight</h3>
+
+						<h4>CSS:</h4>
+
+<pre><code data-trim>
+.sidebar {
+  background-color: #e5e5e5;
+  font-size: 1.2em;
+}
+
+@media all and (min-width: 43.125em) {
+  .sidebar {
+    float: left;
+    width: 31.25%;
+  }
+}
+</code></pre>
+
+					</section>
+
+				</section>
+
+
+
+				<!-- Media Query Bubbling: Jedi Master -->
+
+				<section>
+
+					<section>
+
+						<h3>Media Query Bubbling:<br>Jedi Master</h3>
+
+						<h4>SCSS:</h4>
+
+<pre><code data-trim>
+@mixin bp($breakpoint) {
+  @if $breakpoint == medium {
+    @media all and (min-width: (690px / 16px * 1em)) { @content; }
+  }
+}
+
+.sidebar {
+  background-color: #e5e5e5;
+  font-size: 1.2em;
+
+  @include bp(medium) {
+    float: left;
+    width: percentage(400px / 1280px);
+  }
+}
+</code></pre>
+
+					</section>
+
+					<section>
+
+						<h3>Media Query Bubbling:<br>Jedi Knight</h3>
+
+						<h4>CSS:</h4>
+
+<pre><code data-trim>
+.sidebar {
+  background-color: #e5e5e5;
+  font-size: 1.2em;
+}
+
+@media all and (min-width: 43.125em) {
+  .sidebar {
+    float: left;
+    width: 31.25%;
+  }
+}
+</code></pre>
+
+					</section>
 
 				</section>
 
