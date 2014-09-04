@@ -17,6 +17,9 @@ BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or sta
     * _Hours_ spent calculating percentages, then copying and pasting those results into our CSS
 	* Finished file is **80kB**
 
+    * nscorp.com
+    * Sass + Compass, CodeKit
+
 * **Why** should you use Sass for RWD?
 	* Partials allow for better code organization and less VCS conflicts
 	* Provide function, mixin, and media query bubbling functionality
