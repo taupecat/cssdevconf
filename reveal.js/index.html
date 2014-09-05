@@ -56,11 +56,7 @@
 				<!-- ## Introduction -->
 
 				<section>
-					<h2>Introduction</h2>
-				</section>
-
-				<section>
-						<h2>Trācy Rōtton</h2>
+					<h2>Trācy Rōtton</h2>
 					<ul>
 						<li><a href="http://twitter.com/taupecat">@taupecat</a></li>
 						<li>Lead Web Developer for <a href="http://rp3agency.com">RP3 Agency</a></li>
@@ -143,6 +139,8 @@
 				</section>
 
 				<section>
+
+					<h3>RWD + Sass = </h3>
 
 					<img src="images/chocolate-and-peanutbutter.jpg">
 
@@ -240,7 +238,7 @@ $bp-medium: (690px / 16px * 1em);
   background-color: #e5e5e5;
   font-size: 1.2em;
 
-  @media all and ($bp-medium) {
+  @media all and (min-width: $bp-medium) {
     float: left;
     width: percentage(400px / 1280px);
   }
@@ -327,6 +325,68 @@ $bp-medium: (690px / 16px * 1em);
 
 					</section>
 
+				</section>
+
+				<section>
+					<h2>@extend + %placeholder-selectors</h2>
+
+					<p>Lets you aggregate your classes around a set of common properties.</p>
+				</section>
+
+				<section>
+
+					<section>
+<pre><code data-trim>
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.footer {
+  @extend %clearfix;
+}
+</code></pre>
+					</section>
+
+					<section>
+<pre><code data-trim>
+.footer:before,
+.footer:after {
+  content: "";
+  display: table;
+}
+
+.footer:after {
+  clear: both;
+}
+</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<p>Doesn't work in @media queries.</p>
+				</section>
+
+
+				<!-- Libraries -->
+
+				<section>
+					<h2>Libraries</h2>
+				</section>
+
+				<section>
+					<h3><a href="https://github.com/Team-Sass/breakpoint">breakpoint</a></h3>
+					<ul>
+						<li>Provides mixins similar to the "Jedi Master" method</li>
+						<li>Requires <a href="http://compass-style.org/">Compass</a></li>
+					</ul>
 				</section>
 
 			</div>
