@@ -98,14 +98,6 @@
 				</section>
 
 				<section>
-					<p>[nscorp screenshots]</p>
-
-					<aside class="notes" data-markdown>
-					</aside>
-
-				</section>
-
-				<section>
 
 <pre><code data-trim>
 .column_66 .dog-eared {
@@ -116,6 +108,14 @@
 					<div class="fragment">
 						<img src="images/calculator.png" style="width: 218px; height: auto;">
 					</div>
+
+				</section>
+
+				<section>
+					<p>[nscorp screenshots]</p>
+
+					<aside class="notes" data-markdown>
+					</aside>
 
 				</section>
 
@@ -155,11 +155,28 @@
 				</section>
 
 				<section>
+					<h3>Fluid Grids</h3>
+
+					<h4>“Responsive Formula”</h4>
+
+					<p class="fragment"><strong>target / context = result (%)</strong></p>
+
+				</section>
+
+				<section>
 
 					<h3>Sass Tools for RWD</h3>
 
-					<p>Built-in function: <strong>percentage(target, context)</strong></p>
+					<p>Built-in function: <strong>percentage(target / context)</strong></p>
 
+					<p>Percentage returns a unitless number, expressed as a percentage.</p>
+
+				</section>
+
+				<section>
+					<h3>Flexible Media and Images</h3>
+
+					<p class="fragment">Hold that thought…</p>
 				</section>
 
 				<section>
@@ -301,11 +318,13 @@ $bp-medium: (690px / 16px * 1em);
 }
 </code></pre>
 
+
+						<p><small>Credit: <a href="http://css-tricks.com/conditional-media-query-mixins/">css-tricks.com</a></small></p>
 					</section>
 
 					<section>
 
-						<h3>Media Query Bubbling:<br>Jedi Knight</h3>
+						<h3>Media Query Bubbling:<br>Jedi Master</h3>
 
 						<h4>CSS:</h4>
 
@@ -326,6 +345,31 @@ $bp-medium: (690px / 16px * 1em);
 					</section>
 
 				</section>
+
+
+				<section>
+
+					<h3>Media Query Bubbling:<br>Beyond Viewport Widths</h3>
+
+<pre><code data-trim>
+@mixin hidpi($media: all) {
+  @media 
+		only #{$media} and (min--moz-device-pixel-ratio: 1.5),
+		only #{$media} and (-o-min-device-pixel-ratio: 3/2),
+		only #{$media} and (-webkit-min-device-pixel-ratio: 1.5),
+		only #{$media} and (min-device-pixel-ratio: 1.5),
+		only #{$media} and (min-resolution: 144dpi),
+		only #{$media} and (min-resolution: 1.5dppx) {
+
+		@content;
+	}
+}
+</code></pre>
+
+				</section>
+
+
+
 
 				<section>
 					<h2>@extend + %placeholder-selectors</h2>
@@ -388,6 +432,8 @@ $bp-medium: (690px / 16px * 1em);
 						<li>Requires <a href="http://compass-style.org/">Compass</a></li>
 					</ul>
 				</section>
+
+
 
 			</div>
 
