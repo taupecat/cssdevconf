@@ -354,25 +354,37 @@ $bp-medium: (690px / 16px * 1em);
 <pre><code data-trim>
 @mixin hidpi($media: all) {
   @media 
-		only #{$media} and (min--moz-device-pixel-ratio: 1.5),
-		only #{$media} and (-o-min-device-pixel-ratio: 3/2),
-		only #{$media} and (-webkit-min-device-pixel-ratio: 1.5),
-		only #{$media} and (min-device-pixel-ratio: 1.5),
-		only #{$media} and (min-resolution: 144dpi),
-		only #{$media} and (min-resolution: 1.5dppx) {
+    only #{$media} and (min--moz-device-pixel-ratio: 1.5),
+    only #{$media} and (-o-min-device-pixel-ratio: 3/2),
+    only #{$media} and (-webkit-min-device-pixel-ratio: 1.5),
+    only #{$media} and (min-device-pixel-ratio: 1.5),
+    only #{$media} and (min-resolution: 144dpi),
+    only #{$media} and (min-resolution: 1.5dppx) {
 
-		@content;
-	}
+    @content;
+  }
 }
 </code></pre>
 
 				</section>
 
 
+				<section>
+					<p><strong>“But don't repeated media queries bloat my CSS?”</strong></p>
+
+					<ul>
+						<li class="fragment">Gzipping</li>
+						<li class="fragment">
+							<a href="https://github.com/buildingblocks/grunt-combine-media-queries">Grunt plugin</a><br>
+							<a href="https://www.npmjs.org/package/gulp-combine-media-queries">Gulp plugin</a>
+						</li>
+					</ul>
+
+				</section>
 
 
 				<section>
-					<h2>@extend + %placeholder-selectors</h2>
+					<h3>@extend +<br>%placeholder-selectors</h3>
 
 					<p>Lets you aggregate your classes around a set of common properties.</p>
 				</section>
@@ -393,29 +405,69 @@ $bp-medium: (690px / 16px * 1em);
   }
 }
 
-.footer {
+.site-header {
   @extend %clearfix;
+  background-color: #1fbbe3;
+}
+
+…
+
+.site-footer {
+  @extend %clearfix;
+  background-color: #757b82;
 }
 </code></pre>
 					</section>
 
 					<section>
 <pre><code data-trim>
-.footer:before,
-.footer:after {
+.site-header:before, .site-header:after,
+.site-footer:before, .site-footer:after {
   content: "";
   display: table;
 }
 
-.footer:after {
+.site-header:after, .site-footer:after {
   clear: both;
+}
+
+.site-header {
+  background-color: #1fbbe3;
+}
+
+.site-footer {
+  background-color: #757b82;
 }
 </code></pre>
 					</section>
 				</section>
 
 				<section>
-					<p>Doesn't work in @media queries.</p>
+
+					<p>Doesn't work in @media queries:</p>
+
+<pre><code data-trim>
+.site-header {
+  background-color: #1fbbe3;
+
+  @include bp(medium) {
+    @extend %clearfix;
+  }
+}
+
+.site-footer {
+  background-color: #757b82;
+
+  @include bp(medium) {
+    @extend %clearfix;
+  }
+}
+</code></pre>
+
+					<p class="fragment"><strong>No CSS for you!</strong></p>
+
+					<p class="fragment"><small><a href="http://www.sitepoint.com/cross-media-query-extend-sass/">(Maybe.)</a></small></p>
+
 				</section>
 
 
@@ -426,14 +478,43 @@ $bp-medium: (690px / 16px * 1em);
 				</section>
 
 				<section>
-					<h3><a href="https://github.com/Team-Sass/breakpoint">breakpoint</a></h3>
+					<h3>Breakpoint</h3>
 					<ul>
+						<li><a href="http://breakpoint-sass.com/">http://breakpoint-sass.com/</a></li>
 						<li>Provides mixins similar to the "Jedi Master" method</li>
 						<li>Requires <a href="http://compass-style.org/">Compass</a></li>
 					</ul>
 				</section>
 
+				<section>
+					<h3>Singularity</h3>
 
+					<ul>
+						<li><a href="https://github.com/Team-Sass/Singularity">https://github.com/Team-Sass/Singularity</a></li>
+						<li>Sass-based grid system</li>
+						<li>Also requires Compass</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h3>Susy</h3>
+
+					<ul>
+						<li><a href="http://susy.oddbird.net/">http://susy.oddbird.net/</a></li>
+						<li>Another Sass-based grid system</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Neat</h3>
+
+					<ul>
+						<li><a href="http://neat.bourbon.io/">http://neat.bourbon.io/</a></li>
+						<li>Yet another Sass-based grid system</li>
+						<li>Requires <a href="http://bourbon.io/">Bourbon</a> (which is a little like Compass maybe?)</li>
+					</ul>
+				</section>
 
 			</div>
 
