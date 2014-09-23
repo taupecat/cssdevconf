@@ -49,7 +49,7 @@
 				<section>
 					<h2>Building RWD with Sass</h2>
 
-					<p>The Tools You Need to Know About</p>
+					<!-- <p>The Tools You Need to Know About</p> -->
 
 					<p><a href="http://taupecat.github.io/cssdevconf">http://taupecat.github.io/cssdevconf</a></p>
 				</section>
@@ -120,6 +120,10 @@
 				</section>
 
 				<section>
+					<h2>#NeverAgain</h2>
+				</section>
+
+				<section>
 					<p><img src="images/nscorp-collage.png"></p>
 
 					<p><a href="http://nscorp.com">http://nscorp.com</a></p>
@@ -127,6 +131,17 @@
 					<aside class="notes" data-markdown>
 					</aside>
 
+				</section>
+
+				<section>
+					<h3>Tools Used:</h3>
+
+					<ul>
+						<li class="fragment">Sass</li>
+						<li class="fragment">Compass</li>
+						<li class="fragment">Home-grown Responsive Sass Library</li>
+						<li class="fragment">CodeKit</li>
+					</ul>
 				</section>
 
 
@@ -189,33 +204,26 @@
 
 					<section>
 
-<pre><code data-trim>
-.column_33 .dog-eared {
-  padding: 24px percentage(24px / 300px);
+<pre><code data-trim>.main-content {
+  width: percentage(585px / 960px);
 }
 
-@media all and (max-width: 620px) {
-  .column_33 .dog-eared {
-    padding: 24px percentage(24px / 620px);
-  }
-}
-</code></pre>
+.sidebar {
+  width: percentage(350px / 960px);
+}</code></pre>	
 
 					</section>
 
 					<section>
-
-<pre><code data-trim>
-.column_33 .dog-eared {
-  padding: 24px 8%;
+<pre><code data-trim>.main-content {
+  width: 60.9375%;
 }
 
-@media all and (max-width: 620px) {
-  .column_33 .dog-eared {
-    padding: 24px 3.87097%;
-  }
-}
-</code></pre>
+.sidebar {
+  width: 36.45833%;
+}</code></pre>
+
+						<p class="fragment">Code becomes self-documenting.</p>
 
 					</section>
 
@@ -242,7 +250,7 @@
 
 					<section>
 
-						<h3>Media Query Bubbling:<br>Padawan</h3>
+						<h3>MQB: Padawan</h3>
 
 						<h4>SCSS:</h4>
 
@@ -262,7 +270,7 @@
 
 					<section>
 
-						<h3>Media Query Bubbling:<br>Padawan</h3>
+						<h3>MQB: Padawan</h3>
 
 						<h4>CSS:</h4>
 
@@ -292,7 +300,7 @@
 
 					<section>
 
-						<h3>Media Query Bubbling:<br>Jedi Knight</h3>
+						<h3>MQB: Jedi Knight</h3>
 
 						<h4>SCSS:</h4>
 
@@ -320,7 +328,7 @@ $bp-medium: em(690px);
 
 					<section>
 
-						<h3>Media Query Bubbling:<br>Jedi Knight</h3>
+						<h3>MQB: Jedi Knight</h3>
 
 						<h4>CSS:</h4>
 
@@ -350,7 +358,7 @@ $bp-medium: em(690px);
 
 					<section>
 
-						<h3>Media Query Bubbling:<br>Jedi Master</h3>
+						<h3>MQB: Jedi Master</h3>
 
 						<h4>SCSS:</h4>
 
@@ -386,7 +394,7 @@ $bp-medium: em(690px);
 
 					<section>
 
-						<h3>Media Query Bubbling:<br>Jedi Master</h3>
+						<h3>MQB: Jedi Master</h3>
 
 						<h4>CSS:</h4>
 
@@ -411,7 +419,7 @@ $bp-medium: em(690px);
 
 				<section>
 
-					<h3>Media Query Bubbling:<br>Beyond Viewport Widths</h3>
+					<h3>MQB: Beyond Viewport Widths</h3>
 
 <pre><code data-trim>
 @mixin hidpi($media: all) {
@@ -427,6 +435,8 @@ $bp-medium: em(690px);
   }
 }
 </code></pre>
+
+					<p class="fragment">iPhone 6 & 6 Plus ???</p>
 
 				</section>
 
