@@ -77,3 +77,12 @@ Sass has tools that will help us with all of these.
 * Modernizr + mixins
 
 ## research
+
+## Edits
+
+### A few Sass basics
+
+* Variables
+* Functions
+* Mixins
+
