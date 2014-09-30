@@ -61,26 +61,35 @@
 					<h2>Tracy Rotton</h2>
 					<ul>
 						<li><a href="http://twitter.com/taupecat">@taupecat</a></li>
-						<li>Lead Web Developer for <a href="http://rp3agency.com">RP3 Agency</a></li>
-						<li>Front-end developer for 20 years (seriously)</li>
-						<li><a href="http://wordpress.org/">WordPress</a> core contributor</li>
+						<li>Lead Web Developer for<br>
+							<a href="http://rp3agency.com">RP3 Agency</a> in Bethesda, Maryland</li>
 					</ul>
 
 					<img src="images/logo-white.svg" style="background: none; display: block; margin: 1em auto 0; width: 20%; height: auto;">
 				</section>
 
 				<section>
-					<p>There are <strong>3</strong> things that I really love in web development:</p>
+					<h3>A little more about me:</h3>
+					<ul>
+						<li>Front-end developer for 20 years (seriously)</li>
+						<li><a href="http://wordpress.org/">WordPress</a> core contributor</li>
+						<li>Built first responsive site in 2011</li>
+						<li>Began using Sass in 2012</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>No matter what the platform, you can probably work Sass into your front end workflow:</p>
 
 					<ul>
-						<li class="fragment fade-out" data-fragment-index="2">WordPress</li>
-						<li class="fragment" data-fragment-index="0">Responsive Web Design</li>
-						<li class="fragment" data-fragment-index="1">Sass</li>
+						<li class="fragment">WordPress</li>
+						<li class="fragment">Drupal</li>
+						<li class="fragment">Sitecore</li>
+						<li class="fragment">AEM</li>
+						<li class="fragment">Static site generators</li>
 					</ul>
 
-					<p class="fragment" data-fragment-index="2">This talk is about the last 2.</p>
-
-					<aside class="notes">BUT! everything here can be applied to WordPress (or Drupal, or Sitecore, or static site generators). It doesn't matter what platform you're using as long as you can use Sass in your front end authoring process.</aside>
+					<h4 class="fragment" style="margin-top: 2em">The list goes on…</h4>
 
 				</section>
 
@@ -94,7 +103,7 @@
 				<section>
 					<p><img src="images/rwjf-collage.png"></p>
 
-					<p><a href="http://rwjf.org">http://rwjf.org</a></p>
+					<p><a href="http://rwjf.org">http://rwjf.org</a> (2011)</p>
 
 					<aside class="notes" data-markdown>
 					</aside>
@@ -126,7 +135,7 @@
 				<section>
 					<p><img src="images/nscorp-collage.png"></p>
 
-					<p><a href="http://nscorp.com">http://nscorp.com</a></p>
+					<p><a href="http://nscorp.com">http://nscorp.com</a> (2013)</p>
 
 					<aside class="notes" data-markdown>
 					</aside>
@@ -165,21 +174,25 @@
 
 				<section>
 
+					<h3>Sass Basics</h3>
+
+					<ul>
+						<li class="fragment">Variables</li>
+						<li class="fragment">Functions</li>
+						<li class="fragment">Mixins</li>
+						<li class="fragment">Media Query Bubbling</li>
+						<li class="fragment">Partials</li>
+					</ul>
+
+				</section>
+
+				<section>
+
 					<h3>RWD + Sass = </h3>
 
 					<img src="images/cat-in-box.jpg">
 
 				</section>
-
-				<!--
-				<section>
-
-					<h3>Sass Tools for RWD</h3>
-
-					<h4>Variables</h4>
-
-				</section>
-				-->
 
 				<section>
 					<h3>Fluid Grids</h3>
@@ -534,10 +547,56 @@ $bp-medium: em(690px);
 }
 </code></pre>
 
-					<p class="fragment"><strong>No CSS for you!</strong></p>
+				</section>
+
+
+				<section>
+
+					<img src="images/css-nazi.jpg">
 
 					<p class="fragment"><small><a href="http://www.sitepoint.com/cross-media-query-extend-sass/">(Maybe.)</a></small></p>
 
+				</section>
+
+
+				<section>
+					<h2>Fallbacks</h2>
+
+					<img src="images/fallback.gif">
+
+				</section>
+
+
+				<section>
+					<h3>Fallbacks</h3>
+
+					<p>Separate stylesheet for non-media query capapble browsers.</p>
+
+					<p class="fragment">Don't repeat yourself, use partials.</p>
+				</section>
+
+				<section>
+						<h4>HTML:</h4>
+
+<pre><code data-trim>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gte IE 9]> -->&lt;html><!-- <![endif]-->
+&lt;head>
+  &lt;title>Our Awesome Web Page&lt;/title>
+&lt;/head>
+&lt;body>
+  [... a bunch of stuff ...]
+&lt;/body>
+&lt;/html>
+</code></pre>
+				</section>
+
+
+				<section>
+						<h4>Sass:</h4>
+
+<pre><code data-trim>
+</code></pre>
 				</section>
 
 
@@ -550,64 +609,68 @@ $bp-medium: em(690px);
 				<section>
 					<h3>Breakpoint</h3>
 					<ul>
-						<li><a href="http://breakpoint-sass.com/">http://breakpoint-sass.com/</a></li>
 						<li>Provides mixins similar to the "Jedi Master" method</li>
+						<li>min-width, max-width, viewport ranges, screen resolution</li>
 					</ul>
 				</section>
 
+				<section>
+					<img src="images/demo-time.jpg">
+				</section>
 
 				<section>
 					<h3>Susy</h3>
 
 					<ul>
-						<li><a href="http://susy.oddbird.net/">http://susy.oddbird.net/</a></li>
 						<li>Sass-based grid system</li>
 						<li>Does the math, so you don't have to.</li>
 					</ul>
 				</section>
 
-				<!-- <section>
-					<h3>Singularity</h3>
-
-					<ul>
-						<li><a href="https://github.com/Team-Sass/Singularity">https://github.com/Team-Sass/Singularity</a></li>
-						<li>Sass-based grid system</li>
-						<li>Also requires Compass</li>
-					</ul>
-				</section> -->
-
-				<!-- <section>
-					<h3>Neat</h3>
-
-					<ul>
-						<li><a href="http://neat.bourbon.io/">http://neat.bourbon.io/</a></li>
-						<li>Yet another Sass-based grid system</li>
-						<li>Requires <a href="http://bourbon.io/">Bourbon</a> (which is a little like Compass maybe?)</li>
-					</ul>
-				</section> -->
-
 				<section>
-					<h2>Beyond Sass</h2>
-
-					<aside class="notes">
-						There are tools beyond Sass itself, that work in concert with it, to complete your workflow.
-
-						* Autoprefixer
-						* Flexbox
-						* Modernizr
-					</aside>
+					<img src="images/demo-time.jpg">
 				</section>
 
 				<section>
-					<h3>Flexbox</h3>
+					<h3>But wait, there's more!</h3>
 
-					<p><a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">http://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+					<ul>
+						<li class="fragment">Asymmetrical grids</li>
+						<li class="fragment">Different grids for different pages</li>
+					</ul>
 				</section>
 
 				<section>
-					<h3>Resources</h3>
+					<h2>Resources</h2>
 
-					
+					<h3>Responsive Web Design</h3>
+
+					<ul>
+						<li><a href="http://bradfrost.github.io/this-is-responsive/">This Is Responsive</a></li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+
+					<h3>Sass</h3>
+
+					<ul>
+						<li><a href="http://sass-lang.com/">Sass</a></li>
+						<li><a href="http://thesassway.com/">The Sass Way</a></li>
+						<li><a href="http://breakpoint-sass.com/">Breakpoint</a></li>
+						<li><a href="http://susy.oddbird.net/">Susy</a></li>
+					</ul>
+
+				</section>
+
+				<section>
+					<h2>Thanks!</h2>
+
+					<h4><a href="https://twitter.com/taupecat">@taupecat</a></h4>
+
+				</section>
 
 			</div>
 
