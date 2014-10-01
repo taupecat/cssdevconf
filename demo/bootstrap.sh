@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-apt-get update
-apt-get install -y apache2
-rm -rf /var/www
-ln -fs /vagrant /var/www
-
-
-
-
 echo "Install Node and npm"
 apt-get update
 apt-get install -y software-properties-common python-software-properties
