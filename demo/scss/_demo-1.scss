@@ -1,0 +1,31 @@
+body.demo-1 {
+    background-color: #86342c;
+
+    .wrapper {
+        margin: 0 auto;
+        max-width: 1024px;
+        width: 1024px;
+    }
+
+    .main,
+    .sidebar {
+        float: left;
+        padding: 0.5em 0;
+    }
+
+    .main {
+        background-color: #ffeece;
+        margin-right: 20px;
+        width: 632px;
+
+        // margin-right: 1.953125%; /* 20px / 1024px */
+        // width: 61.71875%; /* 632px / 1024px */
+    }
+
+    .sidebar {
+        background-color: #c6d4f5;
+        width: 372px;
+
+        // width: 36.328125%; /* 372px / 1024px */
+    }
+}

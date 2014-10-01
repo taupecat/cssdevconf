@@ -1,0 +1,73 @@
+body.demo-6 {
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    background-color: #195f80;
+
+    .wrapper {
+        margin: 0 auto;
+        max-width: 1024px;
+        width: 100%;
+    }
+
+    .main,
+    .sidebar {
+        border: 20px solid;
+        padding: 0.5em ( 20px / 1024px * 100% );
+    }
+
+    .main {
+        background-color: #FFEECE;
+        border-color: #805c19;
+    }
+
+    .sidebar {
+        background-color: #C6D4F5;
+        border-color: #193880;
+    }
+
+    @media only all and (min-width: 700px) {
+
+        /* Old, floaty method */
+
+        .main,
+        .sidebar {
+            float: left;
+        }
+
+        .main {
+            margin-right: 1.953125%; /* 20px / 1024px */
+        }
+
+        /* Newer, awesome flexbox method! */
+
+        // .wrapper {
+        //     display: flex;
+        //     justify-content: space-between;
+        // }
+
+        /* Two column sizing */
+
+        .main {
+            width: 61.71875%; /* 632px / 1024px */
+        }
+
+        .sidebar {
+            width: 36.328125%; /* 372px / 1024px */
+        }
+
+        /* Kick it up to three columns */
+
+        // .sidebar {
+        //     width: 25%;
+        // }
+
+        // .main {
+        //     width: 40%;
+        // }
+    }
+}

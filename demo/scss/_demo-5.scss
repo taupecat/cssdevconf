@@ -1,0 +1,46 @@
+// *,
+// *:before,
+// *:after {
+//     box-sizing: border-box;
+// }
+
+body.demo-5 {
+    background-color: #3b2674;
+    margin: 0 auto;
+    max-width: 1024px;
+
+    .main,
+    .sidebar {
+        padding: 0.5em 0;
+
+        // border: 20px solid;
+        // padding: 0.5em ( 20px / 1024px * 100% );
+    }
+
+    .main {
+        background-color: #FFEECE;
+        border-color: #805c19;
+    }
+
+    .sidebar {
+        background-color: #C6D4F5;
+        border-color: #193880;
+    }
+
+    @media only all and (min-width: 700px) {
+
+        .main,
+        .sidebar {
+            float: left;
+        }
+
+        .main {
+            margin-right: 1.953125%; /* 20px / 1024px */
+            width: 61.71875%; /* 632px / 1024px */
+        }
+
+        .sidebar {
+            width: 36.328125%; /* 372px / 1024px */
+        }
+    }
+}

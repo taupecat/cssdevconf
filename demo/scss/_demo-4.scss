@@ -1,0 +1,27 @@
+body.demo-4 {
+    background-color: #86662c;
+
+    .wrapper {
+        margin: 0 auto;
+        max-width: 1024px;
+        text-align: center;
+
+        figure {
+            margin-bottom: 100px;
+            max-width: 100%;
+            width: 1000px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            figcaption {
+                color: #FFF;
+                font-weight: 700;
+                font-size: 2em;
+                text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}

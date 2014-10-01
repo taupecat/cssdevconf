@@ -1,0 +1,27 @@
+{
+  "name": "responsify",
+  "description": "Demo files for my 'RESPONSIFY All the Things' WordCamp talk.",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Tracy Rotton",
+  "homepage": "https://github.com/taupecat/responsify",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/npm/npm.git"
+  },
+  "licenses": [
+    {
+      "type": "WTFPL",
+      "url": "http://www.wtfpl.net"
+    }
+  ],
+  "devDependencies": {
+    "gulp-ruby-sass": "~0.4.3",
+    "gulp-util": "^2.2.14",
+    "gulp-compass": "^1.1.8",
+    "gulp-watch": "^0.6.4",
+    "gulp-notify": "^1.2.5",
+    "gulp": "^3.6.2",
+    "gulp-autoprefixer": "0.0.7"
+  }
+}

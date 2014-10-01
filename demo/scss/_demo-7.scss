@@ -1,0 +1,35 @@
+body.demo-7 {
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    background-color: #86342c;
+
+    .wrapper {
+        margin: 0 auto;
+        max-width: 1024px;
+        width: 100%;
+    }
+
+
+    .outer {
+        background-color: #e4dfc4;
+        height: 50vh;
+        margin: 0 auto;
+        position: relative;
+        width: 50vw;
+    }
+
+    .inner {
+        background-color: #3a738f;
+        position: absolute;
+
+        // left: 50%;
+        // top: 50%;
+
+        // transform: translate(-50%, -50%);
+    }
+}

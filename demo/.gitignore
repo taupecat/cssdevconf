@@ -1,0 +1,4 @@
+.vagrant
+css/main.css
+node_modules
+.sass-cache

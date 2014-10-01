@@ -1,0 +1,43 @@
+body {
+    font-family: $opensans;
+    height: 100vh;
+    width: 100%;
+}
+
+header {
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 5em;
+    color: #FFF;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5);
+
+    @media only all and (max-width: 640px) {
+        font-size: 3em;
+    }
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+.button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 700;
+    font-size: 2em;
+    height: auto;
+    line-height: 2;
+    opacity: 0.3;
+    -webkit-transition: opacity 0.2s linear;
+    margin: 10px;
+
+    &:hover {
+        opacity: 1;
+    }
+}
