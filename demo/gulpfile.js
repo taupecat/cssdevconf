@@ -2,7 +2,6 @@ var gulp			= require('gulp'),
 	gutil			= require('gulp-util'),
 	compass			= require('gulp-compass'),
 	watch			= require('gulp-watch'),
-	notify			= require('gulp-notify'),
 	autoprefixer	= require('gulp-autoprefixer');
 
 
@@ -15,8 +14,7 @@ gulp.task( 'compass', function() {
 		}))
 		.on('error', gutil.log)
 		.pipe(autoprefixer())
-		.pipe(gulp.dest('css'))
-		.pipe(notify({ message: 'Compass task complete.' }));
+		.pipe(gulp.dest('css'));
 });
 
 gulp.task( 'default', ['compass'] );
