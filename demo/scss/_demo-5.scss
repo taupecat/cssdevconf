@@ -1,8 +1,8 @@
-// *,
-// *:before,
-// *:after {
-//     box-sizing: border-box;
-// }
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
 
 body.demo-5 {
     background-color: #3b2674;
@@ -13,8 +13,8 @@ body.demo-5 {
     .sidebar {
         padding: 0.5em 0;
 
-        // border: 20px solid;
-        // padding: 0.5em ( 20px / 1024px * 100% );
+        border: 20px solid;
+        padding: 0.5em percentage(20px / 1024px);
     }
 
     .main {
@@ -35,12 +35,12 @@ body.demo-5 {
         }
 
         .main {
-            margin-right: 1.953125%; /* 20px / 1024px */
-            width: 61.71875%; /* 632px / 1024px */
+            margin-right: percentage(20px / 1024px);
+            width: percentage(632px / 1024px);
         }
 
         .sidebar {
-            width: 36.328125%; /* 372px / 1024px */
+            width: percentage(372px / 1024px);
         }
     }
 }
