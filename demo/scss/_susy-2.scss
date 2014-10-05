@@ -1,0 +1,33 @@
+@import "susy";
+
+$susy: (
+	columns: 12,
+	gutters: 1/4,
+	container: em(1280px),
+	debug: (
+		image: show,
+		color: transparentize(#32bdff, 0.5)
+	)
+);
+
+body.susy-2 {
+	background-color: #195f80;
+
+	.block {
+		background-color: transparentize(#FFEECE, 0.2);
+		border: 5px solid transparentize(#805c19, 0.2);
+		border-radius: 5px;
+		margin-bottom: 2em;
+		padding: 0.5em percentage(20px / 1024px);
+	}
+
+
+	// Create 2 column grid using Susy
+	.wrapper {
+		@include container;
+	}
+
+	.block {
+		@include gallery(12 / 2);
+	}
+}
