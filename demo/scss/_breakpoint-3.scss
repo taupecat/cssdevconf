@@ -1,0 +1,12 @@
+@import "breakpoint";
+
+$hidpi: min-resolution 1.5dppx;
+
+body.breakpoint-3 {
+	background: #682674 url("../images/apples.jpg") no-repeat center center;
+
+	@include breakpoint($hidpi) {
+		background-image: url("../images/apples@2x.jpg");
+		background-size: 400px auto;
+	}
+}
