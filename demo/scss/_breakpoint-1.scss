@@ -11,13 +11,13 @@ $susy: (
 	// )
 );
 
-@import "breakpoint";
+// @import "breakpoint";
 
-$bp-medium:		640px;
-$bp-large:		1024px;
-$bp-xlarge:		1280px;
+// $bp-medium:		640px;
+// $bp-large:		1024px;
+// $bp-xlarge:		1280px;
 
-$breakpoint-to-ems: true;
+// $breakpoint-to-ems: true;
 
 body.breakpoint-1 {
 	background-color: #86342c;
@@ -43,36 +43,36 @@ body.breakpoint-1 {
 	// Create 2 column grid using Susy and Breakpoint
 	.wrapper {
 
-		@include breakpoint($bp-medium) {
+		// @include breakpoint($bp-medium) {
 			@include container;
-		}
+		// }
 	}
 
 	.main {
-		@include breakpoint($bp-medium) {
+		// @include breakpoint($bp-medium) {
 			@include span(6);
-		}
+		// }
 
-		@include breakpoint($bp-large) {
-			@include span(isolate 6 of 12 at 1);
-		}
+		// @include breakpoint($bp-large) {
+		// 	@include span(isolate 6 of 12 at 1);
+		// }
 	}
 
 	.sidebar {
-		@include breakpoint($bp-medium) {
+		// @include breakpoint($bp-medium) {
 			@include span(3);
 
 			&:last-child {
 				@include last;
 			}
-		}
+		// }
 
-		@include breakpoint($bp-large) {
-			@include span(isolate 3 of 12 at 7);
+		// @include breakpoint($bp-large) {
+		// 	@include span(isolate 3 of 12 at 7);
 
-			&:last-child {
-				@include span(isolate 3 of 12 at 10);
-			}
-		}
+		// 	&:last-child {
+		// 		@include span(isolate 3 of 12 at 10);
+		// 	}
+		// }
 	}
 }
