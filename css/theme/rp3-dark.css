@@ -152,3 +152,7 @@ body {
 .reveal code {
   color: #00bde3;
 }
+
+.reveal pre code {
+  color: #fff;
+}
