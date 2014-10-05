@@ -15,15 +15,15 @@ header {
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 3em;
     color: #FFF;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.5);
 
-    @media only all and (max-width: 640px) {
-        font-size: 3em;
+    @media (min-width: (1024px / 16px * 1em)) {
+        font-size: 5em;
     }
 }
 
