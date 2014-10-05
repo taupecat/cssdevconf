@@ -145,3 +145,10 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #00bde3; }
+
+/**
+ * Code
+ */
+.reveal code {
+  color: #00bde3;
+}
