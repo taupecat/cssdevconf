@@ -1,4 +1,4 @@
 .vagrant
-css/main.css
+css/main*.css
 node_modules
 .sass-cache
