@@ -1,15 +1,15 @@
-@import "susy";
+// @import "susy";
 
-$susy: (
-	columns: 12,
-	gutters: 1/4,
-	container: em(1280px),
-	output: float,
-	// debug: (
-	// 	image: show,
-	// 	color: transparentize(#8254ff, 0.5)
-	// )
-);
+// $susy: (
+// 	columns: 12,
+// 	gutters: 1/4,
+// 	container: em(1280px),
+// 	output: float,
+// 	// debug: (
+// 	// 	image: show,
+// 	// 	color: transparentize(#8254ff, 0.5)
+// 	// )
+// );
 
 body.susy-1 {
 	background-color: #3b2674;
@@ -33,19 +33,19 @@ body.susy-1 {
 
 
 	// Create 2 column grid using Susy
-	.wrapper {
-		@include container;
-	}
+	// .wrapper {
+	// 	@include container;
+	// }
 
-	.main {
-		@include span(8);
-	}
+	// .main {
+	// 	@include span(8);
+	// }
 
-	.sidebar {
-		@include span(4 last);
+	// .sidebar {
+	// 	@include span(4 last);
 
-		// &:last-child {
-		// 	@include last;
-		// }
-	}
+	// 	// &:last-child {
+	// 	// 	@include last;
+	// 	// }
+	// }
 }
