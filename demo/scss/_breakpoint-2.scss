@@ -1,31 +1,12 @@
-@import "susy";
-
-$susy: (
-	columns: 12,
-	gutters: 1/4,
-	container: em(1280px),
-	output: float,
-	// debug: (
-	// 	image: show,
-	// 	color: transparentize(#8254ff, 0.5)
-	// )
-);
-
 @import "breakpoint";
 
-$bp-medium:		640px;
-$bp-large:		1024px;
-$bp-xlarge:		1280px;
-
-$breakpoint-to-ems: true;
-
-$hidpi: min-resolution 1.5dppx;
+// $hidpi: min-resolution 1.5dppx;
 
 body.breakpoint-2 {
 	background: #682674 url("../images/apples.jpg") no-repeat center center;
 
-	@include breakpoint($hidpi) {
-		background-image: url("../images/apples@2x.jpg");
-		background-size: 400px auto;
-	}
+	// @include breakpoint($hidpi) {
+	// 	background-image: url("../images/apples@2x.jpg");
+	// 	background-size: 400px auto;
+	// }
 }
