@@ -9,22 +9,18 @@ var gulp			= require('gulp'),
 
 
 gulp.task( 'styles', function() {
-	gulp.src('scss/**/*.scss')
-		.pipe(compass({
+	gulp.src( 'scss/**/*.scss' )
+		.pipe( compass( {
 			config_file: './config.rb',
 			css: 'css',
 			sass: 'scss'
-		}))
+		} ) )
 		.on('error', gutil.log)
-		.pipe(autoprefixer())
-		.pipe(gulp.dest('css'));
-});
-
-gulp.task( 'cmq', function() {
-	gulp.src('css/main.css')
-		.pipe( cmq( { log: true } ) )
-		.pipe( rename( 'css/main.cmq.css' ) )
-		.pipe( gulp.dest( '.' ) );
+		.pipe( autoprefixer() )
+		// .pipe( gulp.dest('css') )
+		// .pipe( cmq( { log: true } ) )
+		// .pipe( rename( { extname: '.cmq.css' } ) )
+		.pipe( gulp.dest( 'css' ) );
 });
 
 gulp.task( 'clean', function() {
@@ -33,10 +29,10 @@ gulp.task( 'clean', function() {
 	});
 });
 
-gulp.task( 'default', ['styles'] );
+gulp.task( 'default', ['clean', 'styles'] );
 
 gulp.task('watch', function() {
-	gulp.start('default');
+	gulp.start('styles');
 
 	// Watch .scss files
 	gulp.watch('scss/*.scss', ['styles']);
