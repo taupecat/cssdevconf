@@ -277,7 +277,13 @@
 
 					<h3>Media Query Bubbling</h3>
 
-					<p class="fragment">This is the awesome sauce that makes responsive web design <strong>soooo</strong> much easier.</p>
+					<div class="fragment">
+
+						<p>This is the awesome sauce that makes responsive web design <strong>soooo</strong> much easier.</p>
+
+						<img src="images/sriracha.png">
+
+					</div>
 
 				</section>
 
@@ -587,7 +593,39 @@ $bp-medium: em(690px);
 
 				</section>
 
+				<section>
 
+					<p>But going the other way?</p>
+
+<pre><code data-trim>
+%some-random-thing {
+  background-color: aliceblue;
+
+  @media only all and (min-width: 37.5em) {
+    background-color: purple;
+  }
+
+  @media only all and (min-width: 62.5em) {
+    background-color: tomato;
+  }
+}
+</code></pre>
+
+				</section>
+
+				<section>
+
+					<h4>media query inside @extend?</h4>
+
+					<img src="images/no-problem.gif">
+
+					<h3>Sure, no problem!</h3>
+
+				</section>
+
+
+
+				<!--
 				<section>
 					<h2>Fallbacks</h2>
 
@@ -608,8 +646,8 @@ $bp-medium: em(690px);
 						<h4>HTML:</h4>
 
 <pre><code data-trim>
-<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
-<!--[if gte IE 9]> -->&lt;html><!-- <![endif]-->
+<!- -[if lt IE 9]><html class="lt-ie9"><![endif]- ->
+<!- -[if gte IE 9]> - ->&lt;html><!- - <![endif]- ->
 &lt;head>
   &lt;title>Our Awesome Web Page&lt;/title>
 &lt;/head>
@@ -627,6 +665,7 @@ $bp-medium: em(690px);
 <pre><code data-trim>
 </code></pre>
 				</section>
+				-->
 
 
 				<!-- Libraries -->
