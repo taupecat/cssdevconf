@@ -678,6 +678,23 @@ $bp-medium: em(690px);
 					<img src="images/demo-time.jpg">
 				</section>
 
+				<section>
+					<h3>But wait, there's more!</h3>
+
+					<ul>
+						<li class="fragment">Screen Resolution Media Queries<br>
+							(HiDPI Displays)</li>
+						<li class="fragment">Integration with Susy:</li>
+					</ul>
+
+<pre class="fragment"><code data-trim>
+@include susy-breakpoint(30em, 8) {
+  // nested code uses an 8-column grid,
+  // starting at a 30em min-width breakpoint...
+  .example { @include span(3); }
+}</code></pre>
+				</section>
+
 
 				<!-- Fallbacks -->
 
@@ -706,21 +723,28 @@ $bp-medium: em(690px);
 					<img src="images/demo-time.jpg">
 				</section>
 
+
+				<!-- Workflow 2014 -->
+
 				<section>
-					<h3>But wait, there's more!</h3>
+					<p><img src="images/rp3agency-collage.png"></p>
+
+					<p><a href="http://rp3agency.com">http://rp3agency.com</a> (2014)</p>
+				</section>
+
+				<section>
+					<h3>Tools Used:</h3>
 
 					<ul>
-						<li class="fragment">Screen Resolution Media Queries<br>
-							(HiDPI Displays)</li>
-						<li class="fragment">Integration with Susy:</li>
+						<li class="fragment">Sass
+							<ul class="fragment">
+								<li>Compass</li>
+								<li>Susy</li>
+								<li>Breakpoint</li>
+							</ul>
+						</li>
+						<li class="fragment">Gulp</li>
 					</ul>
-
-<pre class="fragment"><code data-trim>
-@include susy-breakpoint(30em, 8) {
-  // nested code uses an 8-column grid,
-  // starting at a 30em min-width breakpoint...
-  .example { @include span(3); }
-}</code></pre>
 				</section>
 
 
@@ -738,9 +762,7 @@ $bp-medium: em(690px);
 				</section>
 
 				<section>
-					<h2>More Resources</h2>
-
-					<h3>Sass</h3>
+					<h4>More Resources:<br>Sass</h4>
 
 					<ul>
 						<li><a href="http://sass-lang.com/">Sass</a></li>
@@ -752,7 +774,7 @@ $bp-medium: em(690px);
 				</section>
 
 				<section>
-					<h2>Even More Resources</h2>
+					<h4>Even More Resources</h4>
 
 					<ul>
 						<li><a href="http://css-tricks.com/build-web-layouts-easily-susy/">Building Web Layouts Easily with Susy</a><br>
