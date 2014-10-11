@@ -156,3 +156,8 @@ body {
 .reveal pre code {
   color: #fff;
 }
+
+.reveal blockquote {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
