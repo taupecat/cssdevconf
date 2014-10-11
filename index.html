@@ -47,19 +47,19 @@
 				<!-- # Title -->
 
 				<section>
-					<h2>Building RWD with Sass</h2>
+					<h3>Building RWD with Sass</h3>
 
 					<!-- <p>The Tools You Need to Know About</p> -->
 
+					<blockquote>
+
+						<h4>Tweet It!</h4>
+
+						<p>I'm leveling up my <strong>#RWD</strong> with <strong>Sass</strong> at <strong>@CSSDevConf</strong>!</p>
+
+					</blockquote>
+
 					<p><a href="http://taupecat.github.io/cssdevconf">http://taupecat.github.io/cssdevconf</a></p>
-				</section>
-
-				<!-- ## Tweet It! -->
-
-				<section>
-					<h2>Tweet It!</h2>
-
-					<p>I'm getting Sassy with RWD at @CSSDevConf!</p>
 				</section>
 
 
@@ -89,12 +89,12 @@
 				<section>
 					<p>No matter what the platform, you can probably work Sass into your front end workflow:</p>
 
-					<ul>
-						<li class="fragment">WordPress</li>
-						<li class="fragment">Drupal</li>
-						<li class="fragment">Sitecore</li>
-						<li class="fragment">AEM</li>
-						<li class="fragment">Static site generators</li>
+					<ul class="fragment">
+						<li>WordPress</li>
+						<li>Drupal</li>
+						<li>Sitecore</li>
+						<li>AEM</li>
+						<li>Static site generators</li>
 					</ul>
 
 					<h4 class="fragment" style="margin-top: 2em">The list goes on…</h4>
@@ -201,7 +201,7 @@
 						<li class="fragment">Functions</li>
 						<li class="fragment">Mixins</li>
 						<li class="fragment">Media Query Bubbling</li>
-						<li class="fragment">Partials</li>
+						<!-- <li class="fragment">Partials</li> -->
 					</ul>
 
 				</section>
@@ -281,7 +281,7 @@
 
 						<p>This is the awesome sauce that makes responsive web design <strong>soooo</strong> much easier.</p>
 
-						<img src="images/sriracha.png">
+						<img src="images/sriracha.jpg">
 
 					</div>
 
@@ -486,7 +486,7 @@ $bp-medium: em(690px);
 
 
 				<section>
-					<p><strong>“But don't repeated media queries bloat my CSS?”</strong></p>
+					<p><strong>“But won't repeated media queries bloat my CSS?”</strong></p>
 
 					<ul>
 						<li class="fragment">Gzipping</li>
@@ -589,8 +589,6 @@ $bp-medium: em(690px);
 
 					<h3>No CSS for you!</h3>
 
-					<p class="fragment"><small><a href="http://www.sitepoint.com/cross-media-query-extend-sass/">(Maybe.)</a></small></p>
-
 				</section>
 
 				<section>
@@ -624,54 +622,15 @@ $bp-medium: em(690px);
 				</section>
 
 
-
-				<!--
-				<section>
-					<h2>Fallbacks</h2>
-
-					<img src="images/fallback.gif">
-
-				</section>
-
-
-				<section>
-					<h3>Fallbacks</h3>
-
-					<p>Separate stylesheet for non-media query capapble browsers.</p>
-
-					<p class="fragment">Don't repeat yourself, use partials.</p>
-				</section>
-
-				<section>
-						<h4>HTML:</h4>
-
-<pre><code data-trim>
-<!- -[if lt IE 9]><html class="lt-ie9"><![endif]- ->
-<!- -[if gte IE 9]> - ->&lt;html><!- - <![endif]- ->
-&lt;head>
-  &lt;title>Our Awesome Web Page&lt;/title>
-&lt;/head>
-&lt;body>
-  [... a bunch of stuff ...]
-&lt;/body>
-&lt;/html>
-</code></pre>
-				</section>
-
-
-				<section>
-						<h4>Sass:</h4>
-
-<pre><code data-trim>
-</code></pre>
-				</section>
-				-->
-
-
 				<!-- Libraries -->
 
 				<section>
-					<h2>Libraries</h2>
+					<h3>Libraries</h3>
+
+					<p>Use the collective power of the Internet to drive your responsive project with Sass.</p>
+
+					<p><img src="images/borg.jpg"></p>
+
 				</section>
 
 				<section>
@@ -693,6 +652,7 @@ $bp-medium: em(690px);
 					<ul>
 						<li class="fragment"><strong>Floats:</strong><br>The grid system you're probably used to.</li>
 						<li class="fragment"><strong>Isolate:</strong><br>Uses <code>margin-right: -100%</code> to work around sub-pixel rendering problems.</li>
+						<li class="fragment">Better explanation:<br><a href="http://www.palantir.net/blog/responsive-design-s-dirty-little-secret">Responsive Design's Dirty Little Secret</a></li>
 					</ul>
 
 				</section>
@@ -718,10 +678,58 @@ $bp-medium: em(690px);
 					<img src="images/demo-time.jpg">
 				</section>
 
-				<section>
-					<h2>Resources</h2>
 
-					<h3>Responsive Web Design</h3>
+				<!-- Fallbacks -->
+
+				<section>
+					<h2>Fallbacks</h2>
+
+					<img src="images/fallback.gif">
+
+				</section>
+
+
+				<section>
+					<h3>Fallback Options</h3>
+
+					<ul>
+						<li class="fragment">"Mobile" view (a.k.a., ignore it)</li>
+
+						<li class="fragment"><a href="https://github.com/scottjehl/Respond">Respond.js</a></li>
+
+						<li class="fragment"><a href="http://modernizr.com">Modernizr</a> + Breakpoint</li>
+
+					</ul>
+				</section>
+
+				<section>
+					<img src="images/demo-time.jpg">
+				</section>
+
+				<section>
+					<h3>But wait, there's more!</h3>
+
+					<ul>
+						<li class="fragment">Screen Resolution Media Queries<br>
+							(HiDPI Displays)</li>
+						<li class="fragment">Integration with Susy:</li>
+					</ul>
+
+<pre class="fragment"><code data-trim>
+@include susy-breakpoint(30em, 8) {
+  // nested code uses an 8-column grid,
+  // starting at a 30em min-width breakpoint...
+  .example { @include span(3); }
+}</code></pre>
+				</section>
+
+
+				<!-- Resources -->
+
+				<section>
+					<h3>Wanna learn more?</h3>
+
+					<h4>Responsive Web Design</h4>
 
 					<ul>
 						<li><a href="http://bradfrost.github.io/this-is-responsive/">This Is Responsive</a></li>
@@ -730,7 +738,7 @@ $bp-medium: em(690px);
 				</section>
 
 				<section>
-					<h2>Resources</h2>
+					<h2>More Resources</h2>
 
 					<h3>Sass</h3>
 
@@ -744,6 +752,17 @@ $bp-medium: em(690px);
 				</section>
 
 				<section>
+					<h2>Even More Resources</h2>
+
+					<ul>
+						<li><a href="http://css-tricks.com/build-web-layouts-easily-susy/">Building Web Layouts Easily with Susy</a><br>
+							on CSS Tricks</li>
+						<li><a href="http://www.sitepoint.com/managing-responsive-breakpoints-sass/">Managing Responsive Breakpoints with Sass</a><br>
+							on Sitepoint</li>
+					</ul>
+				</section>
+
+				<section>
 					<h2>Thanks!</h2>
 
 					<h4>Props (partial list):</h4>
@@ -753,12 +772,14 @@ $bp-medium: em(690px);
 						<a href="https://twitter.com/beep">@beep</a>,
 						<a href="https://twitter.com/bswatson">@bswatson</a>,
 						<a href="https://twitter.com/codingdesigner">@codingdesigner</a>,
+						<a href="https://twitter.com/DCSassMeetup">@DCSassMeetup</a>,<br>
 						<a href="https://twitter.com/kurtroberts">@kurtroberts</a>,
-						<a href="https://twitter.com/rwd">@rwd</a>,<br>
+						<a href="https://twitter.com/rwd">@rwd</a>,
 						<a href="https://twitter.com/SassCSS">@SassCSS</a>,
-						<a href="https://twitter.com/SassSusy">@SassSusy</a>,
+						<a href="https://twitter.com/SassSusy">@SassSusy</a>,<br>
 						<a href="https://twitter.com/snugug">@snugug</a>,
 						<a href="https://twitter.com/tropicandid">@tropicandid</a>,
+						<a href="https://twitter.com/WordPressDC">@WordPressDC</a>,
 						<a href="https://twitter.com/xiwcx">@xiwcx</a>
 
 					</small></p>
