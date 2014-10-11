@@ -1,12 +1,84 @@
+@import "susy";
+
+$susy: (
+	columns: 12,
+	gutters: 1/4,
+	container: em(1280px),
+	output: float
+);
+
 @import "breakpoint";
 
-// $hidpi: min-resolution 1.5dppx;
+$bp-medium:		640px;
+$bp-large:		1024px;
+$bp-xlarge:		1280px;
+
+
+$breakpoint-to-ems: true;
+
+
+// $breakpoint-no-query-fallbacks: true;
+// $no-queries: $bp-medium, 'no-query' '.no-mediaqueries';
+
 
 body.breakpoint-3 {
-	background: #682674 url("../images/apples.jpg") center;
+	background-color: #682674;
 
-	// @include breakpoint($hidpi) {
-	// 	background-image: url("../images/apples@2x.jpg");
-	// 	background-size: 400px auto;
-	// }
+	.main,
+	.sidebar {
+		border: 5px solid;
+		border-radius: 5px;
+		padding: 0.5em percentage(20px / 1024px);
+	}
+
+	.main {
+		background-color: #FFEECE;
+		border-color: #805c19;
+	}
+
+	.sidebar {
+		background-color: #C6D4F5;
+		border-color: #193880;
+	}
+
+
+	// Create 2 column grid using Susy and Breakpoint
+	.wrapper {
+
+		@include breakpoint($bp-medium) {
+			@include container;
+		}
+
+		// @include breakpoint($no-queries) {
+		// 	@include container;
+		// }
+	}
+
+	.main {
+		@include breakpoint($bp-medium) {
+			@include span(6);
+		}
+
+		// @include breakpoint($no-queries) {
+		// 	@include span(6);
+		// }
+	}
+
+	.sidebar {
+		@include breakpoint($bp-medium) {
+			@include span(3);
+
+			&:last-child {
+				@include last;
+			}
+		}
+
+		// @include breakpoint($no-queries) {
+		// 	@include span(3);
+
+		// 	&:last-child {
+		// 		@include last;
+		// 	}
+		// }
+	}
 }
