@@ -13,9 +13,7 @@ $bp-medium:		640px;
 $bp-large:		1024px;
 $bp-xlarge:		1280px;
 
-
 $breakpoint-to-ems: true;
-
 
 // $breakpoint-no-query-fallbacks: true;
 // $no-queries: $bp-medium, 'no-query' '.no-mediaqueries';
@@ -59,6 +57,10 @@ body.breakpoint-3 {
 			@include span(6);
 		}
 
+		@include breakpoint($bp-large) {
+			@include span(isolate 6 of 12 at 1);
+		}
+
 		// @include breakpoint($no-queries) {
 		// 	@include span(6);
 		// }
@@ -70,6 +72,14 @@ body.breakpoint-3 {
 
 			&:last-child {
 				@include last;
+			}
+		}
+
+		@include breakpoint($bp-large) {
+			@include span(isolate 3 of 12 at 7);
+
+			&:last-child {
+				@include span(isolate 3 of 12 at 10);
 			}
 		}
 
