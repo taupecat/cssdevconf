@@ -4,11 +4,7 @@ $susy: (
 	columns: 12,
 	gutters: 1/4,
 	container: em(1280px),
-	output: float,
-	// debug: (
-	// 	image: show,
-	// 	color: transparentize(#8254ff, 0.5)
-	// )
+	output: float
 );
 
 // @import "breakpoint";
