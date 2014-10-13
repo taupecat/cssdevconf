@@ -17,16 +17,16 @@ div.title {
 }
 
 .slide-1 {
-  -webkit-animation-delay: 30s;
-  -webkit-animation-duration: 60s;
+  -webkit-animation-delay: 7s;
+  -webkit-animation-duration: 30s;
   -webkit-animation-name: slide1;
   -webkit-animation-iteration-count: infinite;
   opacity: 1;
 }
 
 .slide-2 {
-  -webkit-animation-delay: 30s;
-  -webkit-animation-duration: 60s;
+  -webkit-animation-delay: 7s;
+  -webkit-animation-duration: 30s;
   -webkit-animation-name: slide2;
   -webkit-animation-iteration-count: infinite;
   opacity: 0;
